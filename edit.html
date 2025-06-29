@@ -5,15 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2025年7月教会予定表</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
 
 ```
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
     body {
-        font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+        font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'Meiryo', 'Yu Gothic', sans-serif;
         margin: 0;
         padding: 0;
         color: #333;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
     
     .print-container {
@@ -35,18 +41,21 @@
         font-weight: 700;
         margin: 0;
         color: #2c3e50;
+        font-family: 'Noto Sans JP', sans-serif;
     }
     
     .calendar-subtitle {
         color: #7f8c8d;
         font-size: 10px;
         margin: 2px 0 0;
+        font-family: 'Noto Sans JP', sans-serif;
     }
     
     table {
         width: 100%;
         border-collapse: collapse;
         table-layout: fixed;
+        font-family: 'Noto Sans JP', sans-serif;
     }
     
     th {
@@ -57,6 +66,7 @@
         text-align: center;
         font-weight: 500;
         font-size: 13px;
+        font-family: 'Noto Sans JP', sans-serif;
     }
     
     th.th-sunday {
@@ -72,6 +82,7 @@
         padding: 3px 5px;
         height: 25mm;
         vertical-align: top;
+        font-family: 'Noto Sans JP', sans-serif;
     }
     
     .date {
@@ -79,6 +90,7 @@
         margin-bottom: 2px;
         font-size: 14px;
         display: inline-block;
+        font-family: 'Noto Sans JP', sans-serif;
     }
     
     .date-circle {
@@ -88,6 +100,7 @@
         line-height: 22px;
         text-align: center;
         border-radius: 50%;
+        font-family: 'Noto Sans JP', sans-serif;
     }
     
     .sunday {
@@ -117,10 +130,12 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        font-family: 'Noto Sans JP', sans-serif;
     }
     
     .event-name {
         flex-grow: 1;
+        font-family: 'Noto Sans JP', sans-serif;
     }
     
     .time {
@@ -129,6 +144,7 @@
         font-weight: 400;
         white-space: nowrap;
         margin-left: 4px;
+        font-family: 'Noto Sans JP', sans-serif;
     }
     
     .birthday {
@@ -168,6 +184,7 @@
         font-size: 10px;
         margin-right: 3px;
         font-weight: 500;
+        font-family: 'Noto Sans JP', sans-serif;
     }
     
     .camp-chip {
@@ -180,6 +197,7 @@
         font-size: 10px;
         margin-right: 3px;
         font-weight: 500;
+        font-family: 'Noto Sans JP', sans-serif;
     }
     
     .worship {
@@ -209,6 +227,7 @@
         font-size: 10px;
         margin-right: 3px;
         font-weight: 500;
+        font-family: 'Noto Sans JP', sans-serif;
     }
     
     .special-chip {
@@ -221,6 +240,7 @@
         font-size: 10px;
         margin-right: 3px;
         font-weight: 500;
+        font-family: 'Noto Sans JP', sans-serif;
     }
 </style>
 ```
@@ -362,7 +382,7 @@
                         </div>
                         <div class="event cell-group">
                             <span class="event-name">ぶどうの木</span>
-                            <span class="time">13:30</span>
+                            <span class="event-name">13:30</span>
                         </div>
                         <div class="event prayer">
                             <span class="event-name">祈祷会</span>
