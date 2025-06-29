@@ -17,10 +17,10 @@
     
     .print-container {
         width: 297mm; /* A4横向き幅 */
-        height: 210mm; /* A4横向き高さ */
-        overflow: hidden;
+        min-height: 210mm; /* A4横向き高さ */
+        overflow: visible;
         box-sizing: border-box;
-        padding: 6mm 10mm 8mm 10mm;
+        padding: 4mm 10mm 6mm 10mm;
     }
     
     /* タイトル部分を表の上に配置 */
@@ -72,7 +72,8 @@
     td {
         border: 1px solid #000;
         padding: 4px 6px;
-        height: 24mm;
+        height: auto;
+        min-height: 32mm;
         vertical-align: top;
     }
     
@@ -121,9 +122,9 @@
     }
     
     .event {
-        font-size: 12px;
-        margin-bottom: 2px;
-        line-height: 1.6;
+        font-size: 11px;
+        margin-bottom: 1px;
+        line-height: 1.4;
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -593,9 +594,17 @@
                         <div class="event committee-event">
                             <span class="event-name">４中会合同夏期修養会@秩父</span>
                         </div>
+                        <div class="event cell-group">
+                            <span class="event-name">タビタ</span>
+                            <span class="time">10:30</span>
+                        </div>
                     </td>
                     <td>
                         <div class="date"><span class="date-circle">31</span></div>
+                        <div class="event cell-group">
+                            <span class="event-name">マナ</span>
+                            <span class="time">10:30</span>
+                        </div>
                     </td>
                     <td class="other-month">
                         <div class="date"><span class="date-circle">1</span></div>
