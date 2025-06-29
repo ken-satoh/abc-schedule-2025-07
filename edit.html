@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2025年7月教会予定表</title>
 
+```
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,31 +23,81 @@
     }
     
     .print-container {
-        width: 297mm; /* A4横向き幅 */
-        height: 210mm; /* A4横向き高さ */
-        overflow: hidden;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
         box-sizing: border-box;
-        padding: 8mm 10mm 15mm 10mm;
+    }
+    
+    /* 印刷時のスタイル */
+    @media print {
+        .print-container {
+            width: 297mm;
+            height: 210mm;
+            padding: 10mm;
+            overflow: hidden;
+            max-width: none;
+        }
+    }
+    
+    /* スマートフォン対応 */
+    @media (max-width: 768px) {
+        .print-container {
+            padding: 5px;
+        }
+        
+        table {
+            font-size: 11px;
+        }
+        
+        .event {
+            font-size: 10px;
+        }
+        
+        .time {
+            font-size: 9px;
+        }
+        
+        td {
+            height: auto;
+            min-height: 80px;
+            padding: 2px 3px;
+        }
+        
+        .committee-chip,
+        .camp-chip,
+        .visit-chip,
+        .special-chip {
+            font-size: 8px;
+            padding: 0 3px;
+        }
     }
     
     /* タイトル部分を表の上に配置 */
     .calendar-header {
         text-align: center;
-        margin-bottom: 4mm;
+        margin-bottom: 15px;
     }
     
     .calendar-title {
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 700;
         margin: 0;
         color: #2c3e50;
         font-family: 'Noto Sans JP', sans-serif;
     }
     
+    @media (max-width: 768px) {
+        .calendar-title {
+            font-size: 18px;
+        }
+    }
+    
     .calendar-subtitle {
         color: #7f8c8d;
-        font-size: 10px;
-        margin: 2px 0 0;
+        font-size: 12px;
+        margin: 5px 0 0;
         font-family: 'Noto Sans JP', sans-serif;
     }
     
@@ -61,10 +112,10 @@
         background-color: #4a89dc;
         color: white;
         border: 1px solid #dddddd;
-        padding: 4px 0;
+        padding: 8px 0;
         text-align: center;
         font-weight: 500;
-        font-size: 13px;
+        font-size: 14px;
         font-family: 'Noto Sans JP', sans-serif;
     }
     
@@ -78,25 +129,25 @@
     
     td {
         border: 1px solid #dddddd;
-        padding: 3px 5px;
-        height: 25mm;
+        padding: 5px 8px;
+        height: 120px;
         vertical-align: top;
         font-family: 'Noto Sans JP', sans-serif;
     }
     
     .date {
         font-weight: 700;
-        margin-bottom: 2px;
-        font-size: 14px;
+        margin-bottom: 3px;
+        font-size: 16px;
         display: inline-block;
         font-family: 'Noto Sans JP', sans-serif;
     }
     
     .date-circle {
         display: inline-block;
-        width: 22px;
-        height: 22px;
-        line-height: 22px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
         text-align: center;
         border-radius: 50%;
         font-family: 'Noto Sans JP', sans-serif;
@@ -125,7 +176,7 @@
     .event {
         font-size: 12px;
         margin-bottom: 3px;
-        line-height: 1.3;
+        line-height: 1.4;
         display: flex;
         justify-content: space-between;
         align-items: baseline;
@@ -178,7 +229,7 @@
         background-color: #f5eef8;
         border: 1px solid #d5b8e0;
         color: #8e44ad;
-        padding: 0 5px;
+        padding: 1px 6px;
         border-radius: 8px;
         font-size: 10px;
         margin-right: 3px;
@@ -191,7 +242,7 @@
         background-color: #e8f4fc;
         border: 1px solid #bedcf0;
         color: #3498db;
-        padding: 0 5px;
+        padding: 1px 6px;
         border-radius: 8px;
         font-size: 10px;
         margin-right: 3px;
@@ -221,7 +272,7 @@
         background-color: #fcf3e8;
         border: 1px solid #f0d4be;
         color: #d35400;
-        padding: 0 5px;
+        padding: 1px 6px;
         border-radius: 8px;
         font-size: 10px;
         margin-right: 3px;
@@ -234,7 +285,7 @@
         background-color: #eef8ef;
         border: 1px solid #c8e6c9;
         color: #388e3c;
-        padding: 0 5px;
+        padding: 1px 6px;
         border-radius: 8px;
         font-size: 10px;
         margin-right: 3px;
@@ -381,7 +432,7 @@
                         </div>
                         <div class="event cell-group">
                             <span class="event-name">ぶどうの木</span>
-                            <span class="event-name">13:30</span>
+                            <span class="time">13:30</span>
                         </div>
                         <div class="event prayer">
                             <span class="event-name">祈祷会</span>
